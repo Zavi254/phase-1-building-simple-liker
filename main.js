@@ -4,6 +4,16 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
+const errorDisplay = document.querySelector('.hidden')
+document.querySelector('.like-glyph').addEventListener('click', (event) => {
+  mimicServerCall().then(result => document.querySelector('.like-glyph').textContent = FULL_HEART
+
+  ).catch(error => errorDisplay.textContent = error,
+    document.querySelector('.like-glyph').textContent = EMPTY_HEART
+  )
+});
+
+
 
 
 
